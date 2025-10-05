@@ -1,1 +1,1 @@
-path="$1";user="$2";host="$3"; for d in "$path"/*/; do [ -d "$d" ] || continue; base="$(basename "$d")"; (cd "$path" && zip -r "/tmp/${base}.zip" "$base" >/dev/null); done; echo "scp $user@$host:/tmp/*.zip ."
+path="$1";user="$2";host="$3"; for d in "$path"/*/; do [ -d "$d" ] || continue; base="$(basename "$d")"; (cd "$path" && zip -r "/tmp/${base}.zip" "$base" >/dev/null);echo "scp $user@$host:/tmp/$base.zip ." ;done; echo "scp $user@$host:/tmp/*.zip ."
