@@ -10,3 +10,8 @@ hostname=$3
 # 2nd argument: username
 # 3rd argument: hostname
 infra-automations/auto_zip_and_transfer.sh $services_folder_path $user $hostname
+
+
+# What? => extracts the docker internal and external ports, service names
+infra-automations/fetch_docker_ports.sh
+infra-automations/fetch_docker_ports.sh > docker_ports.txt
