@@ -1,4 +1,6 @@
-## Panix Usage
+# Panix-Persistence 
+
+## Usage
 
 ```sh
 ./auto_panix.sh <Teamx-ip> <Teamx-port>
