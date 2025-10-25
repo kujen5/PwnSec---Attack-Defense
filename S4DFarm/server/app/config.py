@@ -6,44 +6,31 @@ CONFIG = {
     'DEBUG': os.getenv('DEBUG') == '1',
 
     'TEAMS': {
-        f'Team #{i}': f'10.60.{i}.3'
-        for i in range(0, 10)
+        'C4T BuT S4D': '10.80.1.2',
+        'P1G SEKAI': '10.80.2.2',
+        'SKSD': '10.80.3.2',
+        'dtl': '10.80.4.2',
+        'SPRUSH': '10.80.5.2',
+        'Infobahn': '10.80.6.2',
+        'thehackerscrew': '10.80.7.2',
+        'BunkyoWesterns': '10.80.8.2',
+        'Ganesh': '10.80.9.2',
+        'SolidAll': '10.80.11.2',
+        'Odin': '10.80.12.2',
+        'Pinely': '10.80.13.2',
+        'NPC': '10.80.14.2',
     },
-    # 'FLAG_FORMAT': r'CTF\.Moscow\{[a-zA-Z\.0-9_-]+\}',
-    # 'FLAG_FORMAT': r'VolgaCTF{[\w-]*\.[\w-]*\.[\w-]*}',
-    # 'FLAG_FORMAT': r'[A-Z0-9]{31}=',
-    'FLAG_FORMAT' : r'FAUST_[A-Za-z0-9/+]{32}',
 
-    # 'SYSTEM_PROTOCOL': 'ructf_http',
-    # 'SYSTEM_URL': 'http://monitor.ructfe.org/flags',
-    # 'SYSTEM_TOKEN': '275_17fc104dd58d429ec11b4a5e82041cd2',
+    'FLAG_FORMAT' : r'[A-Z0-9]{31}=',
 
-    'SYSTEM_PROTOCOL': 'forcad_tcp',
-    'SYSTEM_HOST': 'submission.faustctf.net',
-    'SYSTEM_PORT': '666',
-    'TEAM_TOKEN': 'your_secret_token', # NEED REPLACE TEAM_TOKEN
-    # 'SYSTEM_HOST': '10.10.10.10',
-    # 'SYSTEM_PORT': '31337',
-    # 'TEAM_TOKEN': '4fdcd6e54faa8991',
-    # 'SYSTEM_PROTOCOL': 'volgactf',
-    # 'SYSTEM_VALIDATOR': 'volgactf',
-    # 'SYSTEM_HOST': 'final.volgactf.ru',
-    # 'SYSTEM_SERVER_KEY': validators.volgactf.get_public_key('https://final.volgactf.ru'),
+    'SYSTEM_PROTOCOL': 'ructf_http',
+    'SYSTEM_URL': '10.80.15.2/flags',
+    'SYSTEM_TOKEN': '3f397a57af3987fb', # NEED REPLACE TEAM_TOKEN
 
-    # The server will submit not more than SUBMIT_FLAG_LIMIT flags
-    # every SUBMIT_PERIOD seconds. Flags received more than
-    # FLAG_LIFETIME seconds ago will be skipped.
     'SUBMIT_FLAG_LIMIT': 100,
-    'SUBMIT_PERIOD': 2,
-    'FLAG_LIFETIME': 3 * 60,
+    'SUBMIT_PERIOD': 10,
+    'FLAG_LIFETIME': 10 * 60,
 
-    # VOLGA: Don't make more than INFO_FLAG_LIMIT requests to get flag info,
-    # usually should be more than SUBMIT_FLAG_LIMIT
-    # 'INFO_FLAG_LIMIT': 10,
-
-    # Password for the web interface. This key will be excluded from config
-    # before sending it to farm clients.
-    # ########## DO NOT FORGET TO CHANGE IT ##########
     'SERVER_PASSWORD': os.getenv('SERVER_PASSWORD') or '@@Pwnsec',
 
     # For all time-related operations
