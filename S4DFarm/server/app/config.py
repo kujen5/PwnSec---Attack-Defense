@@ -24,7 +24,7 @@ CONFIG = {
     'FLAG_FORMAT' : r'[A-Z0-9]{31}=',
 
     'SYSTEM_PROTOCOL': 'ructf_http',
-    'SYSTEM_URL': '10.80.15.2/flags',
+    'SYSTEM_URL': 'http://10.80.15.2/flags',
     'SYSTEM_TOKEN': '3f397a57af3987fb', # NEED REPLACE TEAM_TOKEN
 
     'SUBMIT_FLAG_LIMIT': 100,
